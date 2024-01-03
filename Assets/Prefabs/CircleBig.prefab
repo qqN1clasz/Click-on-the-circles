@@ -137,6 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _killValue: 0
   _animator: {fileID: 7057865516105059923}
+  _timeToDisable: 1
 --- !u!95 &7057865516105059923
 Animator:
   serializedVersion: 5

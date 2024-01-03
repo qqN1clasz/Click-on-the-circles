@@ -4,6 +4,7 @@ public class Circle : MonoBehaviour, IClickable
 {
     [SerializeField] private int _killValue;
     [SerializeField] private Animator _animator;
+    [SerializeField] private float _timeToDisable;
 
     public void Initialize(int killValue)
     {
@@ -11,9 +12,9 @@ public class Circle : MonoBehaviour, IClickable
     }
     
     public int GivePoints()
-    {
-        DisableObject();
+    {       
         PlayDeathAnimation();
+        Invoke(nameof(DisableObject), _timeToDisable);
         return _killValue;
     }
 
